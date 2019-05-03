@@ -56,7 +56,7 @@ function pesquisarCep(cepRecebido)
       //cep esta no formato correto
       loading();
 
-      var e = document.createElement(''); //cria elemento js 
+      var e = document.createElement('script'); //cria elemento js 
       e.src = 'https://viacep.com.br/ws/'+ cep + '/json/?callback=teste'; // o src o retorno desse https (no caso o json), chamando outra funcao no callback
       
       document.body.appendChild(e);  //adiciona a  ao html
