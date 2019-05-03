@@ -64,7 +64,7 @@ function pesquisarCep(cepRecebido)
     else
     {
       //cep nao esta no formato correto
-      limpa_formulário_cep();
+      limparForm();
       alert("Formato de CEP inválido.");
     }
   }
