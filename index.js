@@ -37,42 +37,65 @@ function teste(retornoJson)
 
 
 
-function pesquisarCep(cepRecebido)
-{
-  alert("Cep recebido: " +cepRecebido )
-
-  var cep = cepRecebido.replace(/\D/g, '') //regex para retirar os nao numeros da string
-
-  console.log(cepRecebido);
-  console.log(cep);
+function copiarAqui(){
+  var cep = document.getElementById("cep")
+  console.log(typeof cep)
   
-  if(cep!="")
-  {
-    //cep tem um valor
-    var validacep = /^[0-9]{8}$/;
-    
-    if(validacep.test(cep))
-    {
-      //cep esta no formato correto
-      loading();
+  var obj = {
+    nome: "Rafael",
+    idade: 1
+  }
 
-      var e = document.createElement("script"); //cria elemento js 
-      e.src = 'https://viacep.com.br/ws/'+ cep + '/json/?callback=teste'; // o src o retorno desse https (no caso o json), chamando outra funcao no callback
+  var objUm = {
+    nome: "Rafael"
+  }
+
+  console.log(obj)
+  objUm.select()
+  document.execCommand("copy")
+}
+
+
+
+  // var cepRecebido="24220045"
+  // console.log("Cep recebido: " +cepRecebido )
+
+  // var cep = cepRecebido.replace(/\D/g, '') //regex para retirar os nao numeros da string
+
+  // console.log(cepRecebido);
+  // console.log(cep);
+  
+  // if(cep!="")
+  // {
+  //   //cep tem um valor
+  //   var validacep = /^[0-9]{8}$/;
+    
+  //   if(validacep.test(cep))
+  //   {
+  //     //cep esta no formato correto
+  //     loading();
+
+  //     var e = document.createElement("script"); //cria elemento js 
+  //     //e.src = 'https://viacep.com.br/ws/'+ cep + '/json/?callback=teste'; // o src o retorno desse https (no caso o json), chamando outra funcao no callback\
+  //     e.src = 'https://viacep.com.br/ws/28020801/json/?callback=teste'; // o src o retorno desse https (no caso o json), chamando outra funcao no callback
+
+  //     //'https://viacep.com.br/ws/28020801/json/?callback=teste'
       
-      document.body.appendChild(e);  //adiciona a  ao html
-    }
-    else
-    {
-      //cep nao esta no formato correto
-      limparForm();
-      alert("Formato de CEP inválido.");
-    }
-  }
-  else
-  {
-    //cep nao tem valor
-    alert("Insira um valor para cep")
-  }
-} 
+  //     document.body.appendChild(e);  //adiciona a  ao html
+  //     console.log(e)
+  //   }
+  //   else
+  //   {
+  //     //cep nao esta no formato correto
+  //     limparForm();
+  //     //alert("Formato de CEP inválido.");
+  //   }
+  // }
+  // else
+  // {
+  //   //cep nao tem valor
+  //   //alert("Insira um valor para cep")
+  // }
+ 
 
 
